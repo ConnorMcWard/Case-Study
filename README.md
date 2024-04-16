@@ -23,8 +23,12 @@ This ERD diagram consists of four tables: **Property**, **Unit**, **Pricing**, a
 - **Fields**: Unit ID (Foreign Key), Fee Name, Description, Amount, Is Mandatory (boolean), Is Refundable (boolean).
 - **Description**: The fee table records various fees associated with each unit, specifying whether each fee is mandatory and whether it is refundable.
 
-**Summary:**
-The reason there are individual tables for both **Pricing** and **Fee** is to avoid redundancies. Including these as separate tables prevents duplication in the **Unit** table and allows for more detailed management of fees and pricing strategies.
+## Deviation from 3NF
+- **Explanation**: In implementing this database design, we do not fully adhere to the third normal form. This decision stems from the need to optimize for practical usage scenarios over theoretical database normalization principles. Specifically, the challenge lies in accommodating a flexible pricing structure that can vary significantly across different properties without necessitating a complete system redesign or a standardized pricing model.
 
-**Scalability:**
-- Discuss how this design supports scaling, e.g., adding more properties or handling increases in transaction volume or data size.
+## Scalability Considerations
+- **Adding More Properties**: The design supports scalability in terms of property expansion. New properties can be added seamlessly to the **Property** table without impacting the performance of the system. The one-to-many relationship from properties to units ensures that the system can scale horizontally as new properties are added.
+- **Handling Increased Transaction Volume and Data Size**: The separation of concerns by having distinct tables for units, pricing, and fees allows the database to handle increased loads and transaction volumes effectively. This modular approach means that queries can be optimized on a per-table basis, and indexes can be used efficiently to speed up data retrieval operations as the size of the database grows.
+
+**Summary**:
+This schema is designed to balance practicality and performance, acknowledging trade-offs in normalization for the benefit of scalability and flexibility in real-world applications.
