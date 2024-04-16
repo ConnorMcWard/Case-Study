@@ -6,7 +6,7 @@
 This ERD diagram consists of four tables: **Property**, **Unit**, **Pricing**, and **Fee**. Below is a description of the relationships and fields within each table:
 
 ## 1. Property Table
-- **Fields**: Property ID (PK), Property Name, Marketing Name, Full Address, Street Address, City, State Code, Postal Code, Country Code, Longitude, Latitude, Belonged City, Description, Neighborhood, Neighborhood Description, Currency Code.
+- **Fields**: Property ID (Primary Key), Property Name, Marketing Name, Full Address, Street Address, City, State Code, Postal Code, Country Code, Longitude, Latitude, Belonged City, Description, Neighborhood, Neighborhood Description, Currency Code.
 - **Relationship**: Each property can have one or more associated units, establishing a one-to-many relationship with the **Unit** table.
 
 ## 2. Unit Table
