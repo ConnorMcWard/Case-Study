@@ -27,4 +27,4 @@ This ERD diagram consists of four tables: **Property**, **Unit**, **Pricing**, a
 - **Explanation**: In this database design, I decided to split up a large/ redundant unit table into a Unit table, Fee table, and Pricing table. The reason why there are individual tables for both Pricing and Fee is due to the fact that there would be many redundancies in the Unit table if the Pricing and Fee table were added into one large Unit Table (Approximately 14x the size). It made the most sense to group the tables separately with a way to join them together.
 
 ## Scalability
-- **Explanation**: With this database design, we can scale to business with no issues. We could create a Business table which links to the Unit table through a unit_id Foreign Key. This would not cause any major change in the database design.
+- **Explanation**: With this database design, we can scale for renting to businesses with no issues. We could create a Business table which links to the Unit table through a unit_id Foreign Key. This would not cause any major change in the database design.
