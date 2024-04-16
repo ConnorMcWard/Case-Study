@@ -23,7 +23,7 @@ This ERD diagram consists of four tables: **Property**, **Unit**, **Pricing**, a
 - **Fields**: Unit ID (Foreign Key), Fee Name, Description, Amount, Is Mandatory (boolean), Is Refundable (boolean).
 - **Description**: The fee table records various fees associated with each unit, specifying whether each fee is mandatory and whether it is refundable.
 
-## Deviation from 3NF
-- **Explanation**: In this database design, I did not fully adhere to the third normal form. The the reason why there are individual tables for both Pricing and Fee is due to the fact that there are that there would be many redundancies in the Unit table if it was included with the Pricing and Fee table.
+## Normalization
+- **Explanation**: In this database design, I did not fully adhere to my initial goal of third normal form. I decided to split up a large/ redundant unit table into a unit table, fee table, and pricing table. The the reason why there are individual tables for both Pricing and Fee is due to the fact that there would be many redundancies in the Unit table if the Pricing and Fee table were added into one large Unit Table (Approximately 14x the size). This made the most sense to group separate with a way to join them together.
 
 
