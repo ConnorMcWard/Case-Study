@@ -177,4 +177,4 @@ def serialize_to_json(data, filename):
 
 # run the serialize_to_json function
 # specifying the tmp folder so people without permission can write to the Docker container
-serialize_to_json(data_t, 'output/results.json')
+serialize_to_json(data_t, '/output/results.json')
