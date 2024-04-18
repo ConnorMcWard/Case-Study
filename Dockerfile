@@ -8,7 +8,7 @@ WORKDIR /app
 RUN mkdir -p /app/output
 
 # Install packages
-RUN pip install requests itertools json
+RUN pip install requests
 
 # Copy all files to /app
 COPY . /app
