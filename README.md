@@ -1,5 +1,5 @@
 # Docker Run Commands
-git clone https://github.com/ConnorMcWard/Case-Study
+git clone https://github.com/ConnorMcWard/Case-Study /n
 cd Case-Study
 docker build -t etl .
 docker run -v "$(pwd)/output:/output" etl
