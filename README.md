@@ -21,7 +21,7 @@ This ER diagram consists of four tables: **Property**, **Unit**, **Pricing**, an
 
 With performance in mind, I decided to create both fee table and a pricing table. When running queries, if pricing and fee information were in the same table as unit information, it might make queries more complex and slower due to the larger dataset. By keeping them separate, you can quickly run reports or queries on pricing and fees without having to deal with unit-specific data, which may not be relevant to the query.
 
-Representing this in the ER Diagram, I have a Composite Key (CK) for both the Pricing at Fee Tables. The Composite Key is how to uniquely identify a pricing option or fee.
+Represented in the ER Diagram, I have a Composite Key (CK) for both the Pricing at Fee Tables. The Composite Key is how to uniquely identify a pricing option or fee.
 
  I also initially created a Neighborhood table as well to store the neighborhood description (again improving performance). However, since there are no unique modifiers and it would be possible to have the two of the same neighborhood name, I decided against it and merged the Neighborhood table into the Property table.
 
