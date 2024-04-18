@@ -1,3 +1,9 @@
+# Docker Run Commands
+git clone https://github.com/ConnorMcWard/Case-Study
+cd Case-Study
+docker build -t etl .
+docker run -v "$(pwd)/output:/output" etl
+
 # ER Diagram Overview
 
 ![image](https://github.com/ConnorMcWard/Case-Study/assets/57818139/8bd0bcf6-f150-4362-80c8-9587800d3b1d)
