@@ -32,7 +32,7 @@ I used a 3 Normal Form (3NF) for my normalization of this database schema. 3NF i
  - Property information is fairly stable and doesn't change frequently
  - Each Unit is unique to the Property it belongs to
  - Each Fee is unique enough that it warrants a separate record linking it to unit.
-   - When looking at my results.json, it seems that we could simplify the Fee table to only a few records and connect them to the Unit table with a foreign key. This would require a standardization Fee ID (PK) that doesn't require a foreign key as part of it's composite key.
+   - When looking at my results.json, it seems that we could simplify the Fee table to only a few records and connect them to the Unit table with a foreign key. This would require a standardized Fee ID (PK) that doesn't require a foreign key as part of it's composite key.
 
 
 Below is a description of the relationships and fields within each table:
