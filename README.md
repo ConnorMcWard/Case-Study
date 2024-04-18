@@ -6,7 +6,8 @@
 
 # ER Diagram Overview
 
-![image](https://github.com/ConnorMcWard/Case-Study/assets/57818139/8bd0bcf6-f150-4362-80c8-9587800d3b1d)
+![image](https://github.com/ConnorMcWard/Case-Study/assets/57818139/946d5071-f051-4bc6-9342-c227604dcf7e)
+
 
 
 This ERD diagram consists of four tables: **Property**, **Unit**, **Pricing**, and **Fee**. Below is a description of the relationships and fields within each table:
