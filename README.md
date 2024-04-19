@@ -17,16 +17,16 @@
 ![image](https://github.com/ConnorMcWard/Case-Study/assets/57818139/946d5071-f051-4bc6-9342-c227604dcf7e)
 
 
-This ER diagram consists of four tables: **Property**, **Unit**, **Pricing**, and **Fee**. I chose both Property and Unit tables due to them having a their own IDs when we call the API. This separation allows us to capture the most granular information for our records without introducing redundancy. 
+This ER diagram consists of four tables: **Property**, **Unit**, **Pricing**, and **Fee**. I chose both Property and Unit tables due to them having their own IDs when we call the API. This separation allows us to capture the most granular information for our records without introducing redundancy. 
 
-With performance in mind, I decided to create both fee table and a pricing table. When running queries, if pricing and fee information were in the same table as unit information, it might make queries more complex and slower due to the larger dataset. By keeping them separate, you can quickly run reports or queries on pricing and fees without having to deal with unit-specific data, which may not be relevant to the query.
+With performance in mind, I decided to create both a fee table and a pricing table. When running queries, if pricing and fee information were in the same table as unit information, it might make queries more complex and slower due to the larger dataset. By keeping them separate, you can quickly run reports or queries on pricing and fees without having to deal with unit-specific data, which may not be relevant to the query.
 
 Represented in the ER Diagram, I have a Composite Key (CK) for both the Pricing at Fee Tables. The Composite Key is how to uniquely identify a pricing option or fee.
 
  I also initially created a Neighborhood table as well to store the neighborhood description (again improving performance). However, since there are no unique modifiers and it would be possible to have the two of the same neighborhood name, I decided against it and merged the Neighborhood table into the Property table.
 
 ## Normalization
-I used a 3 Normal Form (3NF) for my normalization of this database schema. 3NF is a good balance between normalization and performance and standard for most business applications. For 3NF, I first have to satisfy the 1NF requirement of each table having a primary key as a way to keep unique records and all attributes are atomic (non-divisible). Using a composite key, as I did for both the Pricing and Fee tables, still maintains 1NF. For 2NF, This is completed by all attributes are dependent on the primary or composite key. Finally for 3NF, I made sure that every non-key attribute isn't dependent on any other non-key attribute.
+I used a 3 Normal Form (3NF) for my normalization of this database schema. 3NF is a good balance between normalization and performance and standard for most business applications. For 3NF, I first have to satisfy the 1NF requirement of each table having a primary key as a way to keep unique records and all attributes are atomic (non-divisible). Using a composite key, as I did for both the Pricing and Fee tables, still maintains 1NF. For 2NF, This is completed by ensuring all attributes are dependent on the primary or composite key. Finally for 3NF, I made sure that every non-key attribute isn't dependent on any other non-key attribute.
 
 ## Assumptions
  - Property information is fairly stable and doesn't change frequently
