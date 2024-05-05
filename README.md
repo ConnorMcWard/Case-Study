@@ -57,16 +57,24 @@ You do not need to assume that you are working in any particular database system
 
 # Docker Run Commands
 - Clone the repository \
-`git clone https://github.com/ConnorMcWard/Case-Study`
+```
+git clone https://github.com/ConnorMcWard/Case-Study
+```
 
 - Change directory \
-`cd Case-Study`
+```
+cd Case-Study
+```
 
 - Build Docker Image \
-`docker build -t etl .`
+```
+docker build -t etl .
+```
 
 - Run Docker Container with Volume Mounting to output folder \
-`docker run -v "$(pwd)/output:/output" etl`
+```
+docker run -v "$(pwd)/output:/output" etl
+```
 
 
 # ER Diagram Overview
