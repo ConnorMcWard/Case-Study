@@ -56,22 +56,22 @@ You do not need to assume that you are working in any particular database system
 
 
 # Docker Run Commands
-- Clone the repository \
+- Clone the repository
 ```
 git clone https://github.com/ConnorMcWard/Case-Study
 ```
 
-- Change directory \
+- Change directory
 ```
 cd Case-Study
 ```
 
-- Build Docker Image \
+- Build Docker Image
 ```
 docker build -t etl .
 ```
 
-- Run Docker Container with Volume Mounting to output folder \
+- Run Docker Container with Volume Mounting to output folder
 ```
 docker run -v "$(pwd)/output:/output" etl
 ```
