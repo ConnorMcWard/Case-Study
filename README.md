@@ -35,16 +35,6 @@ A Price may have zero or more Concessions (i.e., money off).
 
 Units have zero or more Fees (e.g., Screen Fee).
 
-## API
-The NAMER (North America) API for listings returns the current available 
-units. 
-
-```
-GET https://www.common.com/cmn-api/listings/common
-```
-
-Swagger Docs: https://www.common.com/cmn-api/docs#/integration/ListingsController_findAllCommonListings
-
 
 ## Schema Write-up
 
